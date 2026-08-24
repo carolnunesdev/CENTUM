@@ -1,0 +1,7 @@
+com\centum\entity\Album.class
+com\centum\entity\Review.class
+com\centum\entity\Favorite.class
+com\centum\entity\Usuario.class
+com\centum\CentumApplication.class
+com\centum\entity\Wishlist.class
+com\centum\entity\Artist.class
