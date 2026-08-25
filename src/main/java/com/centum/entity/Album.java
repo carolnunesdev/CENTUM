@@ -34,10 +34,8 @@ public class Album {
     protected Album() {
     }
 
-    public Album(String title, Artist artist) { // por que somente o title e o artist são passados como parametros?
-                                                // porque os outros atributos não são obrigatorios, certo? e por que os
-                                                // outros não são obrigatorios? não ficaria meio feio alguns album com
-                                                // algum parametro e otros não?
+    public Album(String title, Artist artist) {
+
         this.title = title;
         this.artist = artist;
     }
@@ -93,5 +91,4 @@ public class Album {
     public void setGenre(String genre) {
         this.genre = genre;
     }
-} // aqui, temos um get e set para cada atributo, mas não temos um set para o id,
-  // porque o id é gerado automaticamente pelo banco de dados, certo?
+}

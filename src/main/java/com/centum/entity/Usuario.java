@@ -1,17 +1,17 @@
 package com.centum.entity;
 
-import jakarta.persistence.*; //o que sgnifica esse import?
-import java.time.OffsetDateTime; //o que sgnifica esse import?
+import jakarta.persistence.*;
+import java.time.OffsetDateTime;
 
-@Entity // por que @Entity? o que ele puxa com essa marcação exatamente? a pasta?
+@Entity
 @Table(name = "usuario")
 public class Usuario {
 
-    @Id // o que sgnifica esse import?
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, length = 100) // o que seria Colum?
+    @Column(nullable = false, length = 100)
     private String username;
 
     @Column(nullable = false, unique = true, length = 150)
@@ -24,13 +24,10 @@ public class Usuario {
     private String avatarUrl;
 
     @Column(name = "created_at", insertable = false, updatable = false)
-    private OffsetDateTime createdAt; // isso aqui é referente a data de criação do usuario, certo? ele é inserido
-                                      // automaticamente
+    private OffsetDateTime createdAt;
 
-    protected Usuario() { // ou é é colocado manualmente? caso seje manual, futuramente trocaremos para
-                          // automatico.
+    protected Usuario() {
 
-        // construtor vazio exigido pelo JPA --- exige por que?
     }
 
     public Usuario(String username, String email, String passwordHash) {

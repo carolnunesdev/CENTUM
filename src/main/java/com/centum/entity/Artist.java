@@ -19,10 +19,10 @@ public class Artist {
     protected Artist() {
     }
 
-    public Artist(String name, String slug) { // por que id não é passado como parametro? ele é gerado automaticamente
-                                              // pelo banco de dados, certo?
+    public Artist(String name, String slug) {
+
         this.name = name;
-        this.slug = slug; // o que seria slug? é o nome do artista sem espaços, certo?, pra que serveria?
+        this.slug = slug;
     }
 
     public Long getId() {
