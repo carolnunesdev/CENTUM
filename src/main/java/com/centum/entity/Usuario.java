@@ -9,7 +9,7 @@ public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Column(nullable = false, length = 100)
     private String username;
@@ -24,7 +24,8 @@ public class Usuario {
     private String avatarUrl;
 
     @Column(name = "created_at", insertable = false, updatable = false)
-    private OffsetDateTime createdAt;
+    private OffsetDateTime createdAt; // colocar como automatico pelo banco de dados, para não precisar setar
+                                      // manualmente sem modfc.
 
     protected Usuario() {
 
@@ -38,7 +39,7 @@ public class Usuario {
 
     // getters e setters
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 

@@ -11,7 +11,7 @@ public class Wishlist {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
@@ -32,7 +32,7 @@ public class Wishlist {
         this.album = album;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 

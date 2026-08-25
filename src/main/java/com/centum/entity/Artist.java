@@ -8,7 +8,7 @@ public class Artist {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Column(nullable = false, length = 150)
     private String name;
@@ -25,7 +25,7 @@ public class Artist {
         this.slug = slug;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 

@@ -5,10 +5,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 import java.util.Optional;
 
-public interface ReviewRepository extends JpaRepository<Review, Long> {
-    List<Review> findByAlbumId(Long albumId);
+public interface ReviewRepository extends JpaRepository<Review, Integer> {
+    List<Review> findByAlbumId(Integer albumId);
 
-    List<Review> findByUsuarioId(Long usuarioId);
+    List<Review> findByUsuarioId(Integer usuarioId);
 
-    Optional<Review> findByUsuarioIdAndAlbumId(Long usuarioId, Long albumId);
+    Optional<Review> findByUsuarioIdAndAlbumId(Integer usuarioId, Integer albumId);
 }

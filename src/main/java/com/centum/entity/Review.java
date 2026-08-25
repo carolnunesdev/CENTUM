@@ -11,7 +11,7 @@ public class Review {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Column(nullable = false)
     private Short rating;
@@ -40,7 +40,7 @@ public class Review {
         this.album = album;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
