@@ -40,9 +40,12 @@ public class FavoriteService {
         return favoriteRepository.findByUsuarioId(usuarioId);
     }
 
+
+
     public void remover(Integer usuarioId, Integer albumId) {
         Favorite favorite = favoriteRepository.findByUsuarioIdAndAlbumId(usuarioId, albumId)
                 .orElseThrow(() -> new RuntimeException("Favorito não encontrado"));
         favoriteRepository.deleteById(favorite.getId());
     }
+    // ultima atualização 03/09!!!
 }

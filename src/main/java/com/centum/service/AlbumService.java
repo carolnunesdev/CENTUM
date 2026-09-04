@@ -43,7 +43,7 @@ public class AlbumService {
         buscarPorId(id);
         albumRepository.deleteById(id);
 
-    }
+    } 
 
     // ultima atalização 25/08
     // tem umas coisas que eu queria colocar em album ja que é meio que uma das
